@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+
+    <script src="script.js"></script>
+
+    <title>Explorers Hub Topic Templater</title>
+
+  </head>
+
+  <body>
+
+<!-- ----------------------- -->
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://newrelic.com">
+        <img src="https://newrelic.com/assets/newrelic/source/NewRelic-logo-bug.png" width="112" height="28">
+      </a>
+  
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+  
+        <a class="navbar-item" href="https://staging-discuss.newrelic.com/admin/customize/themes/105" target="_blank">
+            Test on staging
+        </a>
+  
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More
+          </a>
+  
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://github.com/ryanv94/TopicTemplater/issues">
+              Report an issue
+            </a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-primary" href="https://discuss.newrelic.com">
+              <strong>Return to Explorers Hub</strong>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ---------------------------------------- -->
+
+
+
+  <section class="section">
+            <div class="field">
+                <label class="label">Featured Topic Title</label>
+                <div class="control">
+                  <input class="input" type="text" placeholder="e.g Observability & You" id="boxTitle">
+                </div>
+              </div>
+              
+              <div class="field">
+                <label class="label">Featured Topic URL</label>
+                <div class="control">
+                  <input class="input" type="email" placeholder="e.g. https://discuss.newrelic.com/t/105762" id="boxUrl">
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Featured Topic Link Text</label>
+                <div class="control">
+                  <input class="input" type="text" placeholder="e.g. What does Observability mean to you?" id="boxLink">
+                </div>
+              </div>
+
+                <div class ="field">
+                    <label class="label">Featured Topic Text Body</label>
+                    <textarea class="textarea" placeholder="e.g. The observability buzz word is being thrown around more and more, but what does it mean to you? Give your feedback at the link below" id="boxBody"></textarea>
+                </div>
+
+              <div class ="field">
+              <label class="label">What kind of content are you highlighting?</label>
+              <div class="control">
+                <div class="select">
+                  <select id="boxType">
+                    <option value="0">Build On New Relic</option>
+                    <option value="1">Campaign</option>
+                    <option value="2">TIL</option>
+                    <option value="3">New Features</option>
+                    <option value="4">Level Ups</option>
+                    <option value="5">Best Practice Guides</option>
+                    <option value="6">Office Hours</option>
+                    <option value="7">FSO</option>
+                    <option value="8">TDP</option>
+                    <option value="9">AI</option>
+                    
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <button onclick='myFunc()' class="button is-info is-outlined">Churn the data</button>
+
+
+            <article class="message is-primary" style="margin-top: 30px;">
+                <div class="message-header">
+                  <p>⬇️ Results ⬇️</p>
+                  <button class="delete" aria-label="delete"></button>
+                </div>
+                <div id="results">
+                  
+                </div>
+              </article>
+
+  </section>
+  </body>
+</html>
