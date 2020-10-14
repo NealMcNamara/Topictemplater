@@ -46,11 +46,3 @@ function myFunc() {
 
     return false;
 }
-
-function textCopy() {
-    var copyText = document.getElementById("results");
-    copyText.select();
-    copyText.setSelectionRange(0, 99999); 
-    document.execCommand("copy");
-    alert("Copied the text: " + copyText.value);
-}
